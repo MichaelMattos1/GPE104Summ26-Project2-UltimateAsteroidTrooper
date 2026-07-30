@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 1928365685}
   - component: {fileID: 1928365684}
   - component: {fileID: 1928365683}
-  - component: {fileID: 1928365686}
+  - component: {fileID: 1928365687}
   m_Layer: 0
   m_Name: starShip_0
   m_TagString: Untagged
@@ -314,7 +314,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1928365686
+--- !u!114 &1928365687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,18 +323,77 @@ MonoBehaviour:
   m_GameObject: {fileID: 1928365682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e9ece30d5b01784fba8470e905d0332, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ad11435d83e9e74bb46fc82abe954dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 10
+  TurboSpeed: 15
+  rotateSpeed: 180
   minX: -4
   minY: -4
   maxX: 4
   maxY: 4
+  teleportDistance: 2
+--- !u!1 &2040486063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2040486065}
+  - component: {fileID: 2040486064}
+  m_Layer: 0
+  m_Name: PlayerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2040486064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040486063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0e9185a858ef2439f06bb204503e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pawn: {fileID: 1928365687}
   teleportKey: 116
+  TurboKey: 304
   quitKey: 27
+  upLocal: 119
+  downLocal: 115
+  leftLocal: 97
+  rightLocal: 100
+  upWorld: 273
+  downWorld: 274
+  leftWorld: 276
+  rightWorld: 275
+--- !u!4 &2040486065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040486063}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1928365685}
+  - {fileID: 2040486065}
